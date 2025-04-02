@@ -1,2 +1,2 @@
-resource_group_name = "rg-dev-example"
-location            = "westeurope"
+resource_group_name = "rg-dev-linux-vm"
+location            = "westeurope" 
