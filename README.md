@@ -1,5 +1,5 @@
 ## Resources
-This test case represents the creation of a virtual machine in the Azure cloud. For this, we use:
+This test case represents the creation of a virtual machine in the Azure cloud:
 backend = Azure Blob (created via the Azure portal)
 azure access = Azure Service Principal (created via the Azure portal)
 pub connection key = key vault
@@ -7,7 +7,7 @@ modules = VM, Network, RG, Key Vault
 
 
 ## Connection
-After creating all the resources, you need to run the following commands to connect to the virtual machine:
+After creating all the resources, need to run the following commands to connect to the virtual machine:
 az login
 terraform output -raw vm_private_key > key.pem
 chmod 600 key.pem
