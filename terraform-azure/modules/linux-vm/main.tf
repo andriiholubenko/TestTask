@@ -98,9 +98,3 @@ resource "azurerm_linux_virtual_machine" "vm" {
 
   depends_on = [azurerm_network_interface_security_group_association.nsg_assoc]
 }
-
-output "vm_private_key" {
-  description = "The private key for accessing the VM"
-  value       = tls_private_key.example_ssh.private_key_pem
-  sensitive   = true
-}
