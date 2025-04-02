@@ -20,5 +20,5 @@ variable "tenant_id" {
 
 variable "object_id" {
   type        = string
-  description = "Object ID for the access policy (e.g. Service Principal or user)"
+  description = "Object ID for the access policy - SP"
 }
