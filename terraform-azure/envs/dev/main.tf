@@ -8,9 +8,14 @@ module "resource_group" {
   location            = var.location
 }
 
+resource "random_integer" "suffix" {
+  min = 1000
+  max = 9999
+}
+
 module "key_vault" {
   source              = "../../modules/key-vault"
-  kv_name             = "kv-dev-vm"
+  kv_name             = "kv-dev-${random_integer.suffix.result}"
   resource_group_name = module.resource_group.name
   location            = var.location
   tenant_id           = var.tenant_id

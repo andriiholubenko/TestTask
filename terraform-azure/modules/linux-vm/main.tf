@@ -22,7 +22,9 @@ resource "azurerm_public_ip" "public_ip" {
   name                = "${var.name}-public-ip"
   location            = var.location
   resource_group_name = var.resource_group_name
-  allocation_method   = "Dynamic"
+  allocation_method   = "Static"      
+  sku                 = "Standard"
+  sku_tier            = "Regional"
 }
 
 resource "azurerm_network_security_group" "nsg" {
