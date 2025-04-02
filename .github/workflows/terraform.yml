@@ -3,7 +3,7 @@ name: Terraform
 on:
   push:
     branches:
-      - test-task-vm
+      - test/test-vm-tr
     # paths:
     #   - 'envs/prod/**'
     #   - '.github/workflows/terraform-dev.yml'

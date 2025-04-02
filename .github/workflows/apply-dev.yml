@@ -7,7 +7,7 @@ on:
 
 jobs:
   apply:
-    if: contains(github.event.pull_request.title, 'dev-apply')
+    if: contains(github.event.client_payload.head_commit, 'dev-apply')
     runs-on: ubuntu-latest
 
     steps:
