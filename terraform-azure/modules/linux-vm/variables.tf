@@ -30,7 +30,7 @@ variable "admin_username" {
   description = "Admin username used to log in to the VM"
 }
 
-variable "ssh_public_key" {
+variable "key_vault_id" {
   type        = string
-  description = "SSH public key for authenticating to the virtual machine"
+  description = "Azure Key Vault ID where the private key will be stored"
 }
