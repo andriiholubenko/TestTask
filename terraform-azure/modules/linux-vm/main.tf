@@ -55,6 +55,31 @@ resource "azurerm_network_security_group" "nsg" {
     source_address_prefix      = "*"
     destination_address_prefix = "*"
   }
+
+  security_rule {
+  name                       = "Allow-Prometheus"
+  priority                   = 1003
+  direction                  = "Inbound"
+  access                     = "Allow"
+  protocol                   = "Tcp"
+  source_port_range          = "*"
+  destination_port_range     = "9090"
+  source_address_prefix      = "*"
+  destination_address_prefix = "*"
+}
+
+security_rule {
+  name                       = "Allow-Grafana"
+  priority                   = 1004
+  direction                  = "Inbound"
+  access                     = "Allow"
+  protocol                   = "Tcp"
+  source_port_range          = "*"
+  destination_port_range     = "3000"
+  source_address_prefix      = "*"
+  destination_address_prefix = "*"
+}
+
 }
 
 resource "azurerm_network_interface_security_group_association" "nsg_assoc" {

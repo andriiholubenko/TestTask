@@ -1,0 +1,5 @@
+- name: Update Prometheus scrape targets
+  hosts: monitoring
+  become: true
+  roles:
+    - prometheus_targets

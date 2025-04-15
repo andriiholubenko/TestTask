@@ -1,0 +1,12 @@
+- name: Generate Prometheus config from template
+  template:
+    src: prometheus.yml.j2
+    dest: /etc/prometheus.yml
+    owner: prometheus
+    group: prometheus
+    mode: '0644'
+
+- name: Restart Prometheus
+  systemd:
+    name: prometheus
+    state: restarted

@@ -1,0 +1,32 @@
+- name: Download Node Exporter dashboard JSON
+  uri:
+    url: "https://grafana.com/api/dashboards/1860/revisions/24/download"
+    return_content: yes
+  register: dashboard_json
+
+- name: Import Node Exporter dashboard into Grafana
+  uri:
+    url: "{{ grafana_url }}/api/dashboards/db"
+    method: POST
+    user: "{{ grafana_user }}"
+    password: "{{ grafana_password }}"
+    force_basic_auth: yes
+    headers:
+      Content-Type: "application/json"
+    body: >-
+      {{
+        {
+          "dashboard": (dashboard_json.content | from_json) | combine({
+            "id": None,
+            "uid": "node-exporter-full",
+            "title": "Node Exporter Full",
+            "tags": ["auto-import"],
+            "timezone": "browser"
+          }),
+          "overwrite": True,
+          "folderId": 0,
+          "message": "Auto imported by Ansible"
+        } | to_json
+      }}
+    status_code: 200
+    body_format: json

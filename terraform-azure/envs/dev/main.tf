@@ -32,7 +32,16 @@ module "network" {
 
 module "linux_vm" {
   source              = "../../modules/linux-vm"
-  name                = "dev-linux-vm"
+  name                = var.vm_name
+  resource_group_name = module.resource_group.name
+  location            = var.location
+  subnet_id           = module.network.subnet_id
+  key_vault_id        = module.key_vault.key_vault_id
+}
+
+module "monitoring_vm" {
+  source              = "../../modules/linux-vm"
+  name                = var.vm_monitoring_name
   resource_group_name = module.resource_group.name
   location            = var.location
   subnet_id           = module.network.subnet_id
