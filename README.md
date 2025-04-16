@@ -1,14 +1,16 @@
-## Resources
+## 📦 Resources
 This test case represents the creation of a virtual machine in the Azure cloud:
 ```
-backend = Azure Blob (created via the Azure portal)
-azure access = Azure Service Principal (created via the Azure portal)
-pub connection key = key vault
-modules = VM, Network, RG, Key Vault
+- **backend = Azure Blob (created via the Azure portal)
+- **azure access = Azure Service Principal (created via the Azure portal)
+- **pub connection key = key vault
+- **modules = VM, Network, RG, Key Vault
+- **Configuration Management**: Ansible playbooks to install and configure Prometheus, Grafana, and Node Exporter.
+- **Monitoring Setup**: Automated setup for collecting and visualizing metrics from Azure VMs.
 ```
 
 
-## Connection
+## 🚀 Connection
 After creating all the resources, need to run the following commands to connect to the virtual machine:
 ```
 az login
@@ -19,7 +21,7 @@ terraform output - raw public_ip_address
 
 ## Security rules
 ```
-A security rule was created for port 9100 to allow third-party monitoring services.
+A security rule was created for ports 9100, 9090, 3000 to allow third-party monitoring services.
 SSH connection port 22
 ```
 
