@@ -1,12 +1,16 @@
+# TestTask — DevOps Learning Lab
+
+A hands-on repository to practice and document DevOps workflows using Azure, Terraform, Ansible, and GitHub Actions etc.. This project is actively evolving as I explore new tools and approaches.
+
 ## 📦 Resources
 This test case represents the creation of a virtual machine in the Azure cloud:
 ```
-- **backend** = Azure Blob (created via the Azure portal)
-- **azure access** = Azure Service Principal (created via the Azure portal)
-- **pub connection key** = key vault
-- **modules** = VM, Network, RG, Key Vault
-- **Configuration Management**: Ansible playbooks to install and configure Prometheus, Grafana, and Node Exporter.
-- **Monitoring Setup**: Automated setup for collecting and visualizing metrics from Azure VMs.
+- backend: Azure Blob (created via the Azure portal)
+- azure access: Azure Service Principal (created via the Azure portal)
+- pub connection key: = key vault
+- modules: VM, Network, RG, Key Vault
+- Configuration Management: Ansible playbooks to install and configure Prometheus, Grafana, and Node Exporter.
+- Monitoring Setup: Automated setup for collecting and visualizing metrics from Azure VMs.
 ```
 
 
