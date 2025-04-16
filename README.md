@@ -1,10 +1,10 @@
 ## 📦 Resources
 This test case represents the creation of a virtual machine in the Azure cloud:
 ```
-- **backend = Azure Blob (created via the Azure portal)
-- **azure access = Azure Service Principal (created via the Azure portal)
-- **pub connection key = key vault
-- **modules = VM, Network, RG, Key Vault
+- **backend** = Azure Blob (created via the Azure portal)
+- **azure access** = Azure Service Principal (created via the Azure portal)
+- **pub connection key** = key vault
+- **modules** = VM, Network, RG, Key Vault
 - **Configuration Management**: Ansible playbooks to install and configure Prometheus, Grafana, and Node Exporter.
 - **Monitoring Setup**: Automated setup for collecting and visualizing metrics from Azure VMs.
 ```
