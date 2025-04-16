@@ -1,0 +1,9 @@
+- name: Setup or remove Prometheus and Grafana
+  hosts: monitoring
+  become: true
+  vars:
+    prometheus_state: present  # absent/present
+    grafana_state: present     # absent/present
+  roles:
+    - prometheus
+    - grafana

@@ -1,0 +1,5 @@
+- name: Install node_exporter
+  hosts: monitored
+  become: true
+  roles:
+    - node_exporter

@@ -1,0 +1,9 @@
+- name: Import Grafana dashboards
+  hosts: monitoring
+  become: false
+  vars_files:
+    - group_vars/monitoring.yml
+  tasks:
+    - import_role:
+        name: grafana
+        tasks_from: import_dashboard.yml
