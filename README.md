@@ -3,8 +3,9 @@
 A hands-on repository to practice and document DevOps workflows using Azure, Terraform, Ansible, and GitHub Actions etc.. This project is actively evolving as I explore new tools and approaches.
 
 ## 📦 Resources
-This test case represents the creation of a virtual machine in the Azure cloud:
+This test case represents the creation resource in the Azure cloud:
 ```
+- AKS:cluster (terraform)
 - backend: Azure Blob (created via the Azure portal)
 - azure access: Azure Service Principal (created via the Azure portal)
 - pub connection key: = key vault
